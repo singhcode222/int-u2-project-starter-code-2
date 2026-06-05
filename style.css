@@ -1,11 +1,35 @@
 /* The code below centers the text of all h1's on the page. */
-h1 {
-    text-align:center;
+h1.oasis-logo {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 4rem;
+    text-transform: lowercase;
+    letter-spacing: normal;
+    font-style: normal;
+    padding: 0.75rem 1.5rem;
+    background-color: black;
+    color: white;
+    border: 1rem solid white;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
+h1.oasis-logo::after {
+    content: none;
+}
 body {
-    background-color: #ffdf41;
-    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+body::before {
+    display: none;
 }
 
 /* The code below centers all images on the page and gives them a width of 400px. */
@@ -18,17 +42,80 @@ img {
 
 /* The code below centers the text of all h2's on the page. */
 h2 {
-    text-align:center;
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    margin: 5px auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: white;
 }
 
 /* The code below aligns all the sections horizontally on the bottom. */
 .section-container {
     display:flex;
-    justify-content:space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* The code below a solid black border to section and puts space between them (the margin). */
 .section {
-    border: 5px black solid;
-    margin:5px;
+    margin: 5px auto;
+    padding: 15px;
+    text-align: center;
+    width: fit-content;
+    border: none;
+}
+
+/* Navigation bar styling */
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+}
+
+/* Footer styling */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: white;
+    z-index: 999;
+}
+
+/* Info section styling */
+.info-section {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.info-section p {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 15px;
+    margin: 0 auto;
+    color: white;
+}
+
+.info-section a {
+    color: white;
+    text-decoration: underline;
 }
