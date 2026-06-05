@@ -3,6 +3,11 @@ h1 {
     text-align:center;
 }
 
+body {
+    background-color: #ffdf41;
+    font-family: Arial, sans-serif;
+}
+
 /* The code below centers all images on the page and gives them a width of 400px. */
 img {
   display: block;
