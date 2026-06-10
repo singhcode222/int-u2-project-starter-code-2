@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sample Portfolio</title>
+    <style>
+      /* Basic page layout */
+      :root{--bg:#f6f7fb;--text:#0f172a;--rb-blue:#001f5b;--rb-red:#ff1b2d;--rb-yellow:#ffd400}
+      html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:var(--text);background:var(--bg)}
+
+      /* Sticky navigation at the top */
+      .site-nav{position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid rgba(15,23,42,.06)}
+      .nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+      .logo{font-weight:700;font-size:1.1rem}
+      .nav-links{display:flex;gap:12px}
+      .nav-links a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:6px;transition:all .15s ease}
+      .nav-links a:hover{background:var(--rb-red);color:#fff;transform:translateY(-2px);box-shadow:0 6px 18px rgba(15,23,42,.12)}
+
+      /* Hero / gradient section */
+      .hero{min-height:280px;display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:48px 16px}
+      .hero-inner{max-width:900px}
+      .gradient{background:linear-gradient(90deg,var(--rb-blue) 0%,var(--rb-red) 100%)}
+      .hero h1{margin:0;font-size:2rem}
+      .hero p{margin-top:12px;line-height:1.6}
+
+      /* Page sections */
+      .container{max-width:1000px;margin:32px auto;padding:0 16px}
+      .section{margin-bottom:36px}
+      .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+      .card{background:white;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,.06);transition:transform .18s ease,box-shadow .18s ease}
+      .card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(15,23,42,.12);border-left:4px solid var(--rb-yellow)}
+
+      /* Project images */
+      .project-img{width:100%;height:auto;border-radius:8px;margin-bottom:12px;display:block}
+
+      /* Skills list */
+      .skills{display:flex;flex-wrap:wrap;gap:8px}
+      .skill{background:var(--rb-yellow);color:var(--rb-blue);padding:6px 10px;border-radius:999px;font-weight:700;font-size:.9rem}
+
+      /* Buttons */
+      .btn{display:inline-block;padding:8px 12px;background:var(--rb-blue);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;transition:all .15s ease}
+      .btn:hover{background:var(--rb-red);transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
+
+      /* Small screens tweak */
+      @media (max-width:420px){.hero h1{font-size:1.4rem}.nav-inner{padding:10px}.logo{font-size:1rem}}
+    </style>
+  </head>
+  <body>
+
+    <!-- Top navigation: links to sections. It's sticky so it stays visible. -->
+    <header class="site-nav">
+      <div class="nav-inner">
+        <div class="logo" style="color:var(--rb-red)">Max Verstappen</div>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About Me</a>
+          <a href="#settings">Settings</a>
+          <a href="#skills">Skills</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Gradient hero: blue to purple background -->
+    <section id="home" class="hero gradient">
+      <div class="hero-inner">
+        <h1>Hi — I'm Max Verstappen. Formula 1 driver and problem solver.</h1>
+        <p>Racing in F1 and GT3 keeps me focused on precision and teamwork. I also enjoy solving technical problems and improving performance on and off the track.</p>
+      </div>
+    </section>
+
+    <!-- Projects section: example cards -->
+    <main class="container">
+      <section id="projects" class="section">
+        <!-- Simple heading and grid of project cards -->
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="card">
+            <img class="project-img" src="https://preview.redd.it/mentally-preparing-for-the-chinese-gp-v0-bk9kmlitagpe1.jpeg?auto=webp&s=79aeb7120ef2fbaf7a629daa7a7b1acb953532bb" alt="Preparing for the Chinese GP">
+            <h3>Preparing for the Chinese GP</h3>
+            <p>Preview image from the Chinese GP preparations.</p>
+            <a class="btn" href="#">View</a>
+          </article>
+          <article class="card">
+            <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/4/42/FIA_F1_Austria_2024_Nr._1_Verstappen.jpg" alt="Verstappen Austria 2024">
+            <h3>F1 Austria 2024</h3>
+            <p>Official FIA image from Austria 2024.</p>
+            <a class="btn" href="#">View</a>
+          </article>
+          <article class="card">
+            <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/8/87/2025_Japan_GP_-_Red_Bull_-_Max_Verstappen_-_Race.jpg" alt="Japan GP 2025">
+            <h3>Japan GP 2025</h3>
+            <p>Race image capturing Max Verstappen in action.</p>
+            <a class="btn" href="#">View</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- About Me section -->
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="card">
+          <p>I am a professional racer focused on performance and precision. I apply the same care to web projects and problem solving.</p>
+          <p><strong>Languages:</strong> Dutch, English, German, Italian</p>
+        </div>
+      </section>
+
+      <!-- Settings placeholder (demonstrates another nav item) -->
+      <section id="settings" class="section">
+        <h2>Settings</h2>
+        <div class="card">
+          <p>Site settings and preferences can go here (this is just a placeholder for a portfolio demo).</p>
+        </div>
+      </section>
+
+      <!-- Skills section with pill-style tags -->
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="card">
+          <div class="skills">
+            <span class="skill">Racing in F1</span>
+            <span class="skill">GT3</span>
+            <span class="skill">Problem solving</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Accessibility</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand section: color palette and link to official logos -->
+      <section id="brand" class="section">
+        <h2>Brand</h2>
+        <div class="card">
+          <p>Palette inspired by Red Bull Racing. For official logos and downloadable assets, use the team's website or press resources.</p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap">
+            <div style="width:110px;padding:12px;border-radius:8px;background:var(--rb-blue);color:#fff;text-align:center">Blue<br><small>#001f5b</small></div>
+            <div style="width:110px;padding:12px;border-radius:8px;background:var(--rb-red);color:#fff;text-align:center">Red<br><small>#ff1b2d</small></div>
+            <div style="width:110px;padding:12px;border-radius:8px;background:var(--rb-yellow);color:#001f5b;text-align:center">Yellow<br><small>#ffd400</small></div>
+          </div>
+          <p style="margin-top:12px"><a class="btn" href="https://www.redbullracing.com/int-en" target="_blank" rel="noopener noreferrer">Red Bull Racing — official site (logos & press)</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer style="text-align:center;padding:24px 0;color:#475569">
+      © <span id="year"></span> Max Verstappen — Built with simple HTML & CSS
+    </footer>
+
+    <script>
+      // small JS to set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
